@@ -7,16 +7,16 @@ TEMPLATE_DEBUG = DEBUG
 
 CREATE_USERS = True
 DEFAULT_USERS = (
-        # ('Your Name', 'your_email@domain.com', 'yourusername', 'yourpassword'),
+        # ('csengupta', 'chandra.sengupta@mycuratio.com', 'csengupta', 'password'),
 )
 
 INDIVO_OAUTH_CREDENTIALS = ('indivoadmin', 'indivoadminsecret')
-INDIVO_SERVER_LOCATION = {'scheme': 'http', 'host': 'fda.gping.org', 'port': '8004'}
+INDIVO_SERVER_LOCATION = {'scheme': 'http', 'host': 'localhost', 'port': '8000'}
 
 # Default owner for records created in the admin interface
 DEFAULT_ADMIN_OWNER = {
-	'email':'defaultowner@indivo.org',
-	'full_name': 'Default Owner',
+	'email':'chandra.sengupta@mycuratio.com',
+	'full_name': 'Chandra Sengupta',
 	'contact_email': '' # same as email if empty
 }
 
@@ -33,8 +33,8 @@ DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql_psycopg2', # Add 'postgresql_psycopg2', 'postgresql', 'mysql', 'sqlite3' or 'oracle'.
         'NAME': 'indivo_admin_db',                      # Or path to database file if using sqlite3.
-        'USER': 'YOURUSER',                      # Not used with sqlite3.
-        'PASSWORD': 'YOURPW',                  # Not used with sqlite3.
+        'USER': 'indivo',                      # Not used with sqlite3.
+        'PASSWORD': 'indivo',                  # Not used with sqlite3.
         'HOST': '',                      # Set to empty string for localhost. Not used with sqlite3.
         'PORT': '',                      # Set to empty string for default. Not used with sqlite3.
     }
